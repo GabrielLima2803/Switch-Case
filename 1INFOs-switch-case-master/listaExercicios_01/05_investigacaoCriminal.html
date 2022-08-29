@@ -1,0 +1,125 @@
+<script>
+    /*
+    //PROBLEMA: Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+    - "Telefonou para a vítima?"
+    - "Esteve no local do crime?"
+    - "Mora perto da vítima?"
+    - "Devia para a vítima?"
+    - "Já trabalhou com a vítima?"
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    */
+
+    //ENTRADA
+
+    const telefonou = parseInt(prompt("Telefonou para a vitima  (1- Verdadeiro | 0- Falso) ")) ;
+    const local = parseInt(prompt("Esteve no mesmo local da vitmida (1- Verdadeiro | 0- Falso)  ")) ;
+    const moradia = parseInt(prompt("Mora perto da vitima (1- Verdadeiro | 0- Falso)   ")) ;
+    const devia = parseInt(prompt("Devia para a Vitima  (1- Verdadeiro | 0- Falso) "));     
+    const trabalhou= parseInt(prompt("Trabalhou com a vitima   (1- Verdadeiro | 0- Falso)"));
+    let gravidadeDoSuspeito = telefonou + local + moradia + devia + trabalhou; 
+    let resposta; 
+    //PROCESSAMENTO
+
+    switch (gravidadeDoSuspeito) {
+        case 0:
+        case 1:
+        resposta = "Inocente"    
+            break;
+        case 2:
+            resposta = "Suspeito"
+            break;
+        case 3:
+        case 4:
+            resposta = "Cúmplice"
+            break;
+        case 5:
+            resposta = "Assassino"
+            break;
+        default:
+            resposta = "Invalido"
+            break;
+    }
+
+
+
+
+    /*switch (telefonou) {
+        case "V":
+            gravidadeDaSupeito + 1
+            break;
+            case"F":
+            gravidadeDaSupeito + 0
+            break;
+        default:
+            resposta = "Invalido"
+            break;
+    }
+
+    switch (local) {
+        case "V":
+        gravidadeDaSupeito =    gravidadeDaSupeito + 1
+            break;
+            case "F":
+            gravidadeDaSupeito =    gravidadeDaSupeito + 0
+                break;
+        default:
+        resposta = "Invalido"
+            break;
+    }
+
+    switch (moradia) {
+        case "V":
+        gravidadeDaSupeito =  gravidadeDaSupeito + 1
+            break;
+                case "F":
+                gravidadeDaSupeito =      gravidadeDaSupeito + 0
+                break;
+        default:
+            resposta = "Invalido"
+            break;
+    }
+
+    switch (devia) {
+        case "V":
+          gravidadeDaSupeito =  gravidadeDaSupeito + 1
+            break;
+            case "F":
+            gravidadeDaSupeito =   gravidadeDaSupeito + 0
+                break;
+        default:
+        resposta = "Invalido"
+            break;
+    }
+
+    switch (trabalhou) {
+        case "V":
+        gravidadeDaSupeito =   gravidadeDaSupeito + 1
+            break;
+            case "F":
+            gravidadeDaSupeito =   gravidadeDaSupeito + 0
+                break;
+        default:
+        resposta = "Invalido"
+            break;
+    }
+
+    switch (gravidadeDaSupeito) {
+        case 2:
+        resposta = "Você e suspeito";           
+            break;
+        case 3:
+        case 4:
+            resposta = "Cúmplice";
+            break;
+            case 5:
+                resposta = "você e um assasino";
+                break;
+        default:
+
+            resposta = "Você e inocente";
+            break;
+    }*/
+    
+    //SAÍDA
+    document.write(`${resposta}`)
+</script>
